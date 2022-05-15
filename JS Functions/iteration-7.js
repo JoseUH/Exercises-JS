@@ -15,18 +15,12 @@ const nameFinder = [
 function finderName(param, valor) {
   for (let step = 0; step < param.length; step++) {
     if (param[step] === valor) {
+      console.log (true, step)
       console.log("El elemento " + valor + " existe ");
     }
   }
-
-  console.log("El elemento " + valor + " no existe ");
+ console.log(false)
+  
 }
 
-finderName(nameFinder, "Clint");
-
-// for (let i = 0; i < param.length; i++) {
-//   if (param[i] === value) {
-//     return console.log(true, i);
-//   }
-// }
-// return console.log(false);
+finderName(nameFinder, "Benito");

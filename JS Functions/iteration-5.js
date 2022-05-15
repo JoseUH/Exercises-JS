@@ -18,9 +18,4 @@ function averageWord(param) {
 averageWord(mixedElements);
 console.log("La suma total es de " + suma);
 
-// for (let i = 0; i < param.length; i++) {
-//   if (typeof param[i] === "string") {
-//     sum += param[i].length;
-//   }
-// }
-// return console.log(sum / param.length);
+

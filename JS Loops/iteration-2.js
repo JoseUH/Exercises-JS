@@ -5,46 +5,17 @@ const alumns = [
   { name: "Alfredo Blanco", T1: false, T2: false, T3: false },
   { name: "Raquel Benito", T1: true, T2: true, T3: true },
 ];
-  function SearchAlumns(param) {
-    for (let step = 0; step < param.length; step++) {
-       if (param[step].T1 ) {
-         
-       }
+let isApproved = true ;
+function SearchAlumns(param) {
+  for (let step = 0; step < param.length; step++) {
+    if (
+      (param[step].T1 === true && param[step].T2 === true) ||
+      (param[step].T2 === true && param[step].T3 === true) ||
+      (param[step].T3 === true && param[step].T1 === true)
+    ) {
+       isApproved.push(param[step])
     }
-    
   }
+}
 
-console.log(alumns);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// for (let index = 0; index < alumns.length; index++) {
-//   alumn = alumns[index];
-
-//   let approvedCount = 0;
-//   approvedCount = alumn.T1 ? approvedCount + 1 : approvedCount;
-//   approvedCount = alumn.T2 ? approvedCount + 1 : approvedCount;
-//   approvedCount = alumn.T3 ? approvedCount + 1 : approvedCount;
-//   alumn.isApproved = approvedCount >= 2 ? true : false;
-// }
+console.log(isApproved);
