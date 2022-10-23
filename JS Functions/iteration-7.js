@@ -24,3 +24,4 @@ function finderName(param, valor) {
 }
 
 finderName(nameFinder, "Benito");
+finderName(nameFinder, "Peter");

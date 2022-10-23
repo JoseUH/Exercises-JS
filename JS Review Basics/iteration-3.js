@@ -32,8 +32,21 @@ const users = [
      },
    },
  ];
- 
+ let sounds = {}
+for (const user of users) {
+   for (const key in user.favoritesSounds) {
 
+    // console.log(key)
+      if(key in sounds){
+        sounds[key]++
+      }
+      else{
+        sounds[key]=1
+      }
+   }
+}
+
+console.table(sounds)
 
 
 

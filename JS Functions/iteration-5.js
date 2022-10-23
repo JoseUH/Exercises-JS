@@ -9,6 +9,7 @@ function averageWord(param) {
       suma += param[step];
     } else typeof param[step] === "string";
     {
+      
       longitud = param[step].length;
       console.log("El string tiene " + longitud + " caracteres");
     }
