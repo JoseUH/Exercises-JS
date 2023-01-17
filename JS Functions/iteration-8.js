@@ -11,27 +11,25 @@ const counterWords = [
   "upgrade",
   "code",
 ];
-let repeticiones = 0;
-const repetido = [];
-function repeatCounter(param) {
-  for (i = 0; i < param.length; i++) {
-    for (e = 0; e < param.length; e++) {
-      if (param[i] == param[e]) {
-        repeticiones++;
-      }
-    }
-    if (!repetido.includes(param[i])) {
-      repetido.push(param[i], repeticiones);
-    }
-    repeticiones = 0;
-  }
-}
+// let repeticiones = 0;
+// const repetido = [];
+// function repeatCounter(param) {
+//   for (i = 0; i < param.length; i++) {
+//     for (e = 0; e < param.length; e++) {
+//       if (param[i] == param[e]) {
+//         repeticiones++;
+//       }
+//     }
+//     if (!repetido.includes(param[i])) {
+//       repetido.push(param[i], repeticiones);
+//     }
+//     repeticiones = 0;
+//   }
+// }
 
-repeatCounter(counterWords);
+// repeatCounter(counterWords);
 
-console.log(repetido);
-
-
+// console.log(repetido);
 
 // function repeatCounter(array) {
 //   let counter = {}; // Declaro un objeto vacío
@@ -47,3 +45,17 @@ console.log(repetido);
 // }
 
 // repeatCounter(counterWords);
+
+let repetido = [];
+function repeatCounter(array) {
+  for (let element of array) {
+    if (repetido[element]) {
+      repetido[element]++;
+    } else {
+      repetido[element] = 1;
+    }
+  }
+  return repetido
+}
+
+console.log(repeatCounter(counterWords));
